@@ -1,0 +1,111 @@
+/**
+*
+*
+*
+*
+*/
+
+
+* {
+    background-color:           #21252260;
+    //border-color:             #31322f;
+    border-color:               #504945;
+    text-color:                 #D7F5EB;
+    font:                       "Fira Code Semibold 11";
+    prompt-font:                "Ubuntu Bold 12";
+    prompt-background:          @background-color;
+    //prompt-foreground:        #fb4934;
+    prompt-foreground:          #2dbe25;
+    prompt-padding:             10px;
+    selected-normal-background: #10D63D;
+    //selected-normal-background: #fb4934;
+    selected-normal-foreground: #03251B;
+}
+
+/*window {
+    anchor: center;
+    location: center;
+    width: 40%;
+    padding: 0px;
+    children: [ overlay, mainbox ];
+}*/
+
+mainbox {
+        orientation: vertical;
+        children: [ inputbar, message, listview ];
+        border: 0px;
+        border-radius: 8px;
+        padding: 15px;
+}
+
+message {
+        border: 0px 0px 1px 0px;
+}
+
+inputbar {
+    orientation: horizontal;
+    children: [ prompt, entry, num-filtered-rows];
+    border: 0px 0 1px 0;
+    //padding: 15px;
+    //border-color: #555252;
+    cursor: text;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+num-filtered-rows {
+    vertical-align: 0.5;
+    text-color: #727272;
+    background-color: inherit;
+}
+
+prompt {
+    padding:          @prompt-padding;
+    background-color: @prompt-background;
+    text-color:       @prompt-foreground;
+    font:             @prompt-font;
+    background-color: inherit;
+}
+
+listview {
+    layout: vertical;
+    lines: 10;
+    children: [ scrollbar ];
+    background-color: rgba(0, 0, 0, 0);
+}
+
+entry {
+    padding: 2px;
+    placeholder-color: #727272;
+    vertical-align: 0.5;
+    expand: true;
+    width: 20em;
+    placeholder: "Search symbol / command...";
+    background-color: inherit;
+}
+
+element {
+    padding: 7px 8px;
+    //border: 0 0 1 dash 0;
+    //border-color: #555252;
+    spacing: 5px;
+    orientation: horizontal;
+    children: [ element-icon, element-text ];
+    background-color: rgba(0, 0, 0, 0);
+}
+
+element-icon {
+    padding: 0px 10px 0px 0px;
+    size: 30px;
+    background-color: inherit;
+}
+
+element.selected {
+    background-color: @selected-normal-background;
+    text-color:       @selected-normal-foreground;
+    border-radius: 5px;
+}
+
+element-text {
+    background-color: inherit;
+    text-color:       inherit;
+}
