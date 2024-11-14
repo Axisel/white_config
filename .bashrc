@@ -7,9 +7,15 @@
 
 alias ls='ls --color=auto'
 alias grep='grep --color=auto'
+alias ga='git add'
+alias gs='git status'
+alias gc='git commit'
+alias gp='git push'
 PS1='[\u@\h \W]\$'
 
 export EDITOR=nvim
+
+set -o vi
 
 #env=~/.ssh/agent.env
 

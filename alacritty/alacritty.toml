@@ -1,7 +1,9 @@
-shell="zsh"
 [font.normal]
 family = "Cascadia Code"
 style = "Regular"
 
 [window]
-opacity = 0.65
+opacity = 0.2
+
+[terminal]
+shell="zsh"
