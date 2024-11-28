@@ -38,5 +38,3 @@ set -o vi
 #fi
 
 #unset env
-
-#neofetch
